@@ -1,0 +1,6 @@
+{
+  "name": "StoryPaw! - Choco's Secret Clue",
+  "description": "An interactive primary EFL mystery story reader for Grade 3-4 featuring Detective Choco with audio narration, real-time word highlighting, vocabulary glossary, and checkpoint questions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

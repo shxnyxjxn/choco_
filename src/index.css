@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  .font-display {
+    font-family: 'Fredoka', 'Plus Jakarta Sans', cursive, sans-serif;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+}
+
+@keyframes wagTail {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(18deg); }
+  75% { transform: rotate(-18deg); }
+}
+
+.animate-float {
+  animation: floatSlow 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 2s infinite;
+}
+
+.animate-wag {
+  transform-origin: bottom center;
+  animation: wagTail 0.8s ease-in-out infinite;
+}
+
+@keyframes rabbitNod {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(12deg);
+  }
+}
+
+.animate-nod {
+  transform-box: fill-box;
+  transform-origin: 50% 90%;
+  animation: rabbitNod 1.6s ease-in-out infinite;
+}
+
+@keyframes rabbitHopMotion {
+  0% {
+    transform: translate(370px, 110px);
+  }
+  16% {
+    transform: translate(315px, 55px);
+  }
+  32% {
+    transform: translate(265px, 110px);
+  }
+  40% {
+    transform: translate(260px, 114px);
+  }
+  56% {
+    transform: translate(215px, 50px);
+  }
+  72% {
+    transform: translate(165px, 105px);
+  }
+  90% {
+    transform: translate(165px, 105px);
+  }
+  100% {
+    transform: translate(370px, 110px);
+  }
+}
+
+.animate-rabbit-hop {
+  animation: rabbitHopMotion 3.4s cubic-bezier(0.3, 0.7, 0.4, 1) infinite;
+}
